@@ -27,33 +27,6 @@ print_instr(Instruction *instr, const char *line) {
         /* operator */
         printf("op\t= %s\n", instr -> op -> name);
         /* operands */
-	
-	printf("operand\t= ");
-	
-	if(instr -> opds[0] -> type == REGISTER)
-	  printf("Register(%d)", instr -> opds[0] -> value);
-	if(instr -> opds[0] -> type == NUMBER_TYPE)
-	  printf("Number(%d)", instr -> opds[0] -> value);
-	if(instr -> opds[0] -> type == LABEL)
-	  printf("Label(\"%s\")", instr -> opds[0] -> value);
-	if(instr -> opds[0] -> type == STRING)
-	  printf("String(\"%s\")", instr -> opds[0] -> value);
-
- 
-	for(int i = 1; i < 3; i++) {
-	  if(instr -> opds[i] -> type != NULL) {
-	    	if(instr -> opds[i] -> type == REGISTER)
-		  printf(", Register(%d)", instr -> opds[i] -> value);
-		if(instr -> opds[i] -> type == NUMBER_TYPE)
-		  printf(", Number(%d)", instr -> opds[i] -> value);
-		if(instr -> opds[i] -> type == LABEL)
-		  printf(", Label(\"%s\")", instr -> opds[i] -> value);
-		if(instr -> opds[0] -> type == STRING)
-		  printf(", String(\"%s\")", instr -> opds[i] -> value);
-	  }	  
-
-	  else break;
-	}
         /* PERCORRER O VETOR DE OPERANDOS E IMPRIMIR */
         printf("\n");
     }
