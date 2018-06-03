@@ -1,0 +1,6 @@
+* Teste
+teste   MUL     $1, $2, $3
+start	ADD     $3, $2, 10
+	MUL     $4, $5, $13
+	STR     "Hello World"
+

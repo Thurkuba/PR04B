@@ -27,7 +27,7 @@ print_instr(Instruction *instr, const char *line) {
         /* operator */
         printf("op\t= %s\n", instr -> op -> name);
         /* operands */
-	//	printf("%d", instr -> opds[0] -> type);
+
 	printf("operand\t= ");
 	
 	if(instr -> opds[0] -> type == REGISTER)

@@ -1,4 +1,5 @@
 * Teste
+teste   ADD     $0, $1, 1
 a       IS      $0
 start   ADD     a, a, 1
         MUL     a, $2, $3   * Multiplica
